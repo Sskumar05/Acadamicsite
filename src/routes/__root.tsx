@@ -6,7 +6,10 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  ScrollRestoration,
 } from "@tanstack/react-router";
+import { Navbar } from "../components/layout/Navbar";
+import { Footer } from "../components/layout/Footer";
 
 import appCss from "../styles.css?url";
 
@@ -113,7 +116,14 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Navbar />
+        <main className="flex-1 bg-[#F8FAFC]">
+          <Outlet />
+        </main>
+        <Footer />
+        <ScrollRestoration />
+      </div>
     </QueryClientProvider>
   );
 }
