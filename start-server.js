@@ -10,8 +10,16 @@ app.use('/*', serveStatic({ root: './dist/client' }));
 
 // 2. Route all other requests to TanStack Start's SSR handler
 app.all('*', async (c) => {
-  // Use c.env or process.env depending on your environment needs, Render uses process.env
-  return await serverModule.fetch(c.req.raw, process.env, c.executionCtx);
+  // In Node.js, accessing c.executionCtx throws an error
+  let ctx;
+  try {
+    ctx = c.executionCtx;
+  } catch (e) {
+    ctx = undefined;
+  }
+  
+  // Use process.env for Render environment variables
+  return await serverModule.fetch(c.req.raw, process.env, ctx);
 });
 
 const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
