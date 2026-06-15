@@ -53,7 +53,7 @@ export function Navbar() {
           className={`flex items-center gap-2 text-2xl font-bold tracking-tight ${textClass}`}
         >
           <FaGraduationCap className="text-[#F59E0B]" />
-            AK Primary School
+          Infant Jesus
         </Link>
 
         <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
@@ -93,24 +93,21 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       <div
-        className={`fixed inset-0 z-50 transition ${
-          open ? "pointer-events-auto" : "pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-50 transition ${open ? "pointer-events-auto" : "pointer-events-none"
+          }`}
       >
         <div
           onClick={() => setOpen(false)}
-          className={`absolute inset-0 bg-black/50 transition-opacity ${
-            open ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-black/50 transition-opacity ${open ? "opacity-100" : "opacity-0"
+            }`}
         />
         <aside
-          className={`absolute right-0 top-0 h-full w-72 bg-white p-6 shadow-2xl transition-transform ${
-            open ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`absolute right-0 top-0 h-full w-72 bg-white p-6 shadow-2xl transition-transform ${open ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="mb-8 flex items-center justify-between">
             <span className="flex items-center gap-2 text-xl font-bold text-[#0F172A]">
-              <FaGraduationCap className="text-[#F59E0B]" /> ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL
+              <FaGraduationCap className="text-[#F59E0B]" /> INFANT JESUS NURSERY AND PRIMARY SCHOOL
             </span>
             <button onClick={() => setOpen(false)} aria-label="Close menu">
               <FiX size={26} className="text-[#0F172A]" />

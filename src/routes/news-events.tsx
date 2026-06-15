@@ -12,7 +12,7 @@ function NewsEventsPage() {
       img: "https://images.unsplash.com/photo-1581726690015-c9861fa5057f?auto=format&fit=crop&w=600&q=80",
       date: "May 12, 2026",
       category: "Achievement",
-      title: "ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL Students Win National Robotics Championship",
+      title: "INFANT JESUS NURSERY AND PRIMARY SCHOOL Students Win National Robotics Championship",
       excerpt: "Our primary school team brought home the gold from this year's national finals after building an automated sorting machine.",
     },
     {
@@ -58,7 +58,7 @@ function NewsEventsPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">News & Events</h1>
           <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
-            Stay updated with the latest happenings, achievements, and upcoming activities at ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL.
+            Stay updated with the latest happenings, achievements, and upcoming activities at INFANT JESUS NURSERY AND PRIMARY SCHOOL.
           </p>
         </div>
 

@@ -12,13 +12,13 @@ import { FaStar, FaBookOpen, FaPalette, FaFlask } from "react-icons/fa";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL — Where Excellence Meets Innovation" },
+      { title: "INFANT JESUS NURSERY AND PRIMARY SCHOOL — Where Excellence Meets Innovation" },
       {
         name: "description",
         content:
-          "ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL is a premium private primary school nurturing future leaders through world-class academics, arts, athletics, and innovation from LKG to Class 5.",
+          "INFANT JESUS NURSERY AND PRIMARY SCHOOL is a premium private primary school nurturing future leaders through world-class academics, arts, athletics, and innovation from LKG to Class 5.",
       },
-      { property: "og:title", content: "ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL — Premium Private Primary School" },
+      { property: "og:title", content: "INFANT JESUS NURSERY AND PRIMARY SCHOOL — Premium Private Primary School" },
       {
         property: "og:description",
         content: "World-class early childhood and primary education that shapes future leaders.",
@@ -121,13 +121,13 @@ function AboutPreview() {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div data-aos="fade-up">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#F59E0B]">
-              About ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL
+              About INFANT JESUS NURSERY AND PRIMARY SCHOOL
             </span>
             <h2 className="mt-3 text-4xl font-bold text-[#0F172A] md:text-5xl">
               Shaping minds, building character
             </h2>
             <p className="mt-6 text-lg text-[#475569] leading-relaxed">
-              For over two decades, ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL has been a beacon of academic excellence and
+              For over two decades, INFANT JESUS NURSERY AND PRIMARY SCHOOL has been a beacon of academic excellence and
               holistic development. Our primary focus is on nurturing young minds from LKG to Class 5, providing them with a strong foundation for their future academic journeys.
             </p>
             <Link
@@ -225,7 +225,7 @@ function ActivitiesPreview() {
               Activities
             </span>
             <h2 className="mt-3 text-4xl font-bold text-[#0F172A] md:text-5xl">
-              Activities at Arulmigu Korakkar Nursery and Primary School
+              Activities at Infant Jesus Nursery and Primary School
             </h2>
             <p className="mt-6 text-lg text-[#475569] leading-relaxed">
               More than academics — a vibrant community of artists, athletes, scientists, and dreamers. Our state-of-the-art campus is designed specifically for primary education, ensuring safe, engaging, and inspiring spaces for every child.
@@ -331,7 +331,7 @@ function CTASection() {
   return (
     <section className="bg-[#F59E0B] py-20 px-4 sm:px-6 lg:px-8 text-center text-white">
       <div className="mx-auto max-w-4xl" data-aos="fade-up">
-        <h2 className="text-3xl font-bold md:text-5xl mb-6">Ready to Join Arulmigu Korakkar Nursery and Primary School?</h2>
+        <h2 className="text-3xl font-bold md:text-5xl mb-6">Ready to Join Infant Jesus Nursery and Primary School?</h2>
         <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
           Begin your child's journey towards excellence. Applications are now open for the upcoming academic year.
         </p>

@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 text-2xl font-bold text-white">
-              <FaGraduationCap className="text-[#F59E0B]" /> AK Primary School
+              <FaGraduationCap className="text-[#F59E0B]" /> IJ Primary School
             </div>
             <p className="mt-4 text-sm">
               A premium private primary school nurturing tomorrow's leaders through academic excellence
@@ -98,7 +98,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/50 md:flex-row">
-          <div>© {new Date().getFullYear()} ARULMIGU KORAKKAR NURSERY AND PRIMARY SCHOOL. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} INFANT JESUS NURSERY AND PRIMARY SCHOOL. All rights reserved.</div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#F59E0B]">
               Privacy

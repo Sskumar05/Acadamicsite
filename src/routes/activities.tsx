@@ -81,7 +81,7 @@ function ActivitiesPage() {
           <div>
             <h2 className="text-3xl font-bold text-[#0F172A] mb-6">More Than Just Academics</h2>
             <p className="text-[#475569] text-lg leading-relaxed mb-4">
-              At Arulmigu Korakkar Nursery and Primary School, we believe that education extends far beyond the four walls of a classroom. Our varied activities are designed to provide a holistic environment where primary students can discover their passions, build lifelong friendships, and develop essential life skills.
+              At Infant Jesus Nursery and Primary School, we believe that education extends far beyond the four walls of a classroom. Our varied activities are designed to provide a holistic environment where primary students can discover their passions, build lifelong friendships, and develop essential life skills.
             </p>
             <p className="text-[#475569] text-lg leading-relaxed">
               From our expansive playgrounds for sports to our specialized arts studios and cultural events, every activity is an opportunity for learning and personal growth.

@@ -61,7 +61,7 @@ function AboutPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">About Us</h1>
           <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
-            Discover the rich history, values, and vision that make Arulmigu Korakkar Nursery and Primary School a leading institution in primary education.
+            Discover the rich history, values, and vision that make Infant Jesus Nursery and Primary School a leading institution in primary education.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Our History</h2>
               <p className="text-[#475569] text-lg leading-relaxed mb-4">
-                Founded in 2000, Arulmigu Korakkar Nursery and Primary School started with a vision to revolutionize early childhood and primary education. Over the past two decades, we have grown from a small community school into a premier educational institution recognized for excellence.
+                Founded in 2000, Infant Jesus Nursery and Primary School started with a vision to revolutionize early childhood and primary education. Over the past two decades, we have grown from a small community school into a premier educational institution recognized for excellence.
               </p>
               <p className="text-[#475569] text-lg leading-relaxed">
                 Our journey has been marked by continuous innovation in curriculum development, facility enhancements, and a steadfast commitment to our core values, making us the preferred choice for discerning parents.
