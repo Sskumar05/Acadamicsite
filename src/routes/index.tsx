@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 function FloatingShape({ className, delay = 0 }: { className: string; delay?: number }) {
   return (
     <motion.div
-      className={`absolute rounded-full ${className}`}
+      className={`absolute rounded-full hidden sm:block ${className}`}
       animate={{ y: [0, -30, 0], x: [0, 15, 0] }}
       transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay }}
     />
@@ -54,12 +54,12 @@ function Hero() {
       <FloatingShape className="right-20 top-40 h-40 w-40 bg-[#F59E0B]/10 blur-3xl" delay={2} />
       <FloatingShape className="bottom-32 left-1/3 h-32 w-32 bg-white/10 blur-2xl" delay={4} />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center text-white mt-16">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center text-white mt-16 sm:mt-20">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-6 inline-block rounded-full border border-[#F59E0B]/40 bg-[#F59E0B]/10 px-4 py-1.5 text-sm font-medium text-[#F59E0B]"
+          className="mb-4 sm:mb-6 inline-block rounded-full border border-[#F59E0B]/40 bg-[#F59E0B]/10 px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-medium text-[#F59E0B]"
         >
           Est. 2000 · Accredited Primary Private School
         </motion.span>
@@ -67,7 +67,7 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mb-4 sm:mb-6 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
         >
           Where Excellence <span className="text-[#F59E0B]">Meets</span> Innovation
         </motion.h1>
@@ -75,7 +75,7 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mx-auto mb-10 max-w-2xl text-lg text-white/80 md:text-xl"
+          className="mx-auto mb-8 sm:mb-10 max-w-2xl text-base sm:text-lg text-white/80 md:text-xl px-2"
         >
           Discover a world-class education that shapes future leaders through inquiry, character,
           and creativity.
@@ -88,13 +88,13 @@ function Hero() {
         >
           <Link
             to="/admissions"
-            className="rounded-full bg-[#F59E0B] px-8 py-3.5 font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#d98708]"
+            className="w-full sm:w-auto rounded-full bg-[#F59E0B] px-6 sm:px-8 py-3 sm:py-3.5 font-semibold text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#d98708] text-center"
           >
             Apply Now
           </Link>
           <Link
             to="/activities"
-            className="rounded-full border-2 border-white px-8 py-3.5 font-semibold text-white transition-all hover:scale-105 hover:bg-white hover:text-[#0F172A]"
+            className="w-full sm:w-auto rounded-full border-2 border-white px-6 sm:px-8 py-3 sm:py-3.5 font-semibold text-white transition-all hover:scale-105 hover:bg-white hover:text-[#0F172A] text-center"
           >
             Explore Activities
           </Link>
@@ -116,14 +116,14 @@ function Hero() {
 
 function AboutPreview() {
   return (
-    <section className="bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="grid items-center gap-8 md:gap-12 lg:grid-cols-2">
           <div data-aos="fade-up">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#F59E0B]">
               About INFANT JESUS NURSERY AND PRIMARY SCHOOL
             </span>
-            <h2 className="mt-3 text-4xl font-bold text-[#0F172A] md:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl">
               Shaping minds, building character
             </h2>
             <p className="mt-6 text-lg text-[#475569] leading-relaxed">
@@ -138,7 +138,7 @@ function AboutPreview() {
             </Link>
           </div>
           <div data-aos="fade-up" data-aos-delay="100">
-            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students learning" className="rounded-2xl shadow-xl w-full" />
+            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80" alt="Students learning" className="rounded-2xl shadow-xl w-full aspect-[4/3] object-cover" />
           </div>
         </div>
       </div>
@@ -169,18 +169,18 @@ function AcademicsPreview() {
   ];
 
   return (
-    <section className="bg-[#F8FAFC] py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#F8FAFC] py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center" data-aos="fade-up">
           <span className="text-sm font-semibold uppercase tracking-widest text-[#F59E0B]">
             Primary Education
           </span>
-          <h2 className="mt-3 text-4xl font-bold text-[#0F172A] md:text-5xl">
+          <h2 className="mt-3 text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl">
             Our Academic Programs
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-10 sm:mt-16 grid gap-6 sm:gap-8 sm:grid-cols-2 md:grid-cols-3">
           {programs.map((p, i) => (
             <motion.div
               key={p.title}
@@ -213,18 +213,18 @@ function AcademicsPreview() {
 
 function ActivitiesPreview() {
   return (
-    <section className="bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="grid grid-cols-2 gap-4" data-aos="fade-right">
-             <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?auto=format&fit=crop&w=400&q=80" alt="Sports" className="rounded-2xl h-64 w-full object-cover" />
-             <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=400&q=80" alt="Arts" className="rounded-2xl h-64 w-full object-cover mt-8" />
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 order-2 lg:order-1" data-aos="fade-right">
+             <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?auto=format&fit=crop&w=400&q=80" alt="Sports" className="rounded-2xl h-44 sm:h-64 w-full object-cover" />
+             <img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=400&q=80" alt="Arts" className="rounded-2xl h-44 sm:h-64 w-full object-cover mt-6 sm:mt-8" />
           </div>
-          <div data-aos="fade-left">
+          <div data-aos="fade-left" className="order-1 lg:order-2">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#F59E0B]">
               Activities
             </span>
-            <h2 className="mt-3 text-4xl font-bold text-[#0F172A] md:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl">
               Activities at Infant Jesus Nursery and Primary School
             </h2>
             <p className="mt-6 text-lg text-[#475569] leading-relaxed">
@@ -280,13 +280,13 @@ function Testimonials() {
   };
 
   return (
-    <section className="bg-[#0F172A] py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#0F172A] py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <div className="text-center" data-aos="fade-up">
           <span className="text-sm font-semibold uppercase tracking-widest text-[#F59E0B]">
             Voices
           </span>
-          <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
+          <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl md:text-5xl">
             What Our Community Says
           </h2>
         </div>
@@ -301,7 +301,7 @@ function Testimonials() {
                       <FaStar key={i} />
                     ))}
                   </div>
-                  <p className="mx-auto max-w-2xl text-xl italic text-white/90 md:text-2xl leading-relaxed">
+                  <p className="mx-auto max-w-2xl text-lg italic text-white/90 sm:text-xl md:text-2xl leading-relaxed">
                     "{s.quote}"
                   </p>
                   <img
@@ -329,22 +329,22 @@ function Testimonials() {
 
 function CTASection() {
   return (
-    <section className="bg-[#F59E0B] py-20 px-4 sm:px-6 lg:px-8 text-center text-white">
+    <section className="bg-[#F59E0B] py-14 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 text-center text-white">
       <div className="mx-auto max-w-4xl" data-aos="fade-up">
-        <h2 className="text-3xl font-bold md:text-5xl mb-6">Ready to Join Infant Jesus Nursery and Primary School?</h2>
-        <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+        <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6">Ready to Join Infant Jesus Nursery and Primary School?</h2>
+        <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10 max-w-2xl mx-auto">
           Begin your child's journey towards excellence. Applications are now open for the upcoming academic year.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           <Link
             to="/admissions"
-            className="rounded-full bg-[#0F172A] px-8 py-4 font-bold text-white shadow-lg transition-transform hover:scale-105"
+            className="w-full sm:w-auto rounded-full bg-[#0F172A] px-6 sm:px-8 py-3 sm:py-4 font-bold text-white shadow-lg transition-transform hover:scale-105 text-center"
           >
             Start Application
           </Link>
           <Link
             to="/contact"
-            className="rounded-full border-2 border-white px-8 py-4 font-bold text-white transition-all hover:bg-white hover:text-[#F59E0B]"
+            className="w-full sm:w-auto rounded-full border-2 border-white px-6 sm:px-8 py-3 sm:py-4 font-bold text-white transition-all hover:bg-white hover:text-[#F59E0B] text-center"
           >
             Contact Us
           </Link>

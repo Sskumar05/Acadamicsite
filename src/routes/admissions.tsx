@@ -20,18 +20,18 @@ function AdmissionsPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-24 pb-16"
+      className="pt-20 sm:pt-24 pb-12 sm:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">Admissions</h1>
-          <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl lg:text-6xl">Admissions</h1>
+          <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-[#475569] max-w-3xl mx-auto px-2">
             Take the first step towards providing your child with a world-class primary education.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16 md:mb-20">
           {/* Admissions Process */}
           <div>
             <h2 className="text-3xl font-bold text-[#0F172A] mb-8">Admission Process</h2>
@@ -51,14 +51,14 @@ function AdmissionsPage() {
               ))}
             </div>
 
-            <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-[#F59E0B]/30 bg-[#F59E0B]/10 px-5 py-3 text-sm font-medium text-[#0F172A]">
+            <div className="mt-8 sm:mt-10 inline-flex items-center gap-3 rounded-full border border-[#F59E0B]/30 bg-[#F59E0B]/10 px-4 sm:px-5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-[#0F172A]">
               <FaStar className="text-[#F59E0B]" />
               Tuition assistance is available for qualifying families.
             </div>
           </div>
 
           {/* Inquiry Form */}
-          <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
             <h3 className="text-2xl font-bold text-[#0F172A] mb-2">Request Information</h3>
             <p className="text-[#475569] mb-6">Fill out the form below and our admissions office will contact you within 24 hours.</p>
 
@@ -134,15 +134,15 @@ function AdmissionsPage() {
 
         {/* FAQs */}
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-6 sm:mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-3 sm:space-y-4">
             {[
               { q: "What is the age requirement for LKG?", a: "Children must be at least 3.5 years old by the start of the academic year for LKG admission." },
               { q: "What documents are needed for admission?", a: "You will need the child's birth certificate, recent passport-sized photographs, vaccination records, and a transfer certificate (if applicable from Class 1 onwards)." },
               { q: "Do you offer transportation?", a: "Yes, we offer safe, air-conditioned school bus services covering all major routes in the city with GPS tracking." },
               { q: "What is the student-to-teacher ratio?", a: "We maintain a low ratio of 15:1 for kindergarten and 20:1 for primary classes to ensure personalized attention." }
             ].map((faq, i) => (
-              <div key={i} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+              <div key={i} className="bg-white p-4 sm:p-6 rounded-2xl border border-gray-100 shadow-sm">
                 <h4 className="text-lg font-bold text-[#0F172A] mb-2">{faq.q}</h4>
                 <p className="text-[#475569]">{faq.a}</p>
               </div>

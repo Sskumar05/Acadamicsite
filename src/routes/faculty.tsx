@@ -82,24 +82,24 @@ function FacultyPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-24 pb-16"
+      className="pt-20 sm:pt-24 pb-12 sm:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">Our Faculty</h1>
-          <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl lg:text-6xl">Our Faculty</h1>
+          <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-[#475569] max-w-3xl mx-auto px-2">
             Meet the dedicated educators and leaders who inspire our students every day.
           </p>
         </div>
 
         {/* Leadership */}
-        <div className="mb-24">
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-12 text-center">Leadership Team</h2>
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div className="mb-16 sm:mb-20 md:mb-24">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-8 sm:mb-12 text-center">Leadership Team</h2>
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 md:gap-12 max-w-4xl mx-auto">
             {leadership.map((leader, i) => (
-              <div key={i} className="bg-white rounded-3xl p-8 text-center shadow-lg border border-gray-100 flex flex-col items-center">
-                <img src={leader.img} alt={leader.name} className="w-40 h-40 rounded-full object-cover border-4 border-[#F59E0B] mb-6 shadow-md" />
+              <div key={i} className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 text-center shadow-lg border border-gray-100 flex flex-col items-center">
+                <img src={leader.img} alt={leader.name} className="w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full object-cover border-4 border-[#F59E0B] mb-4 sm:mb-6 shadow-md" />
                 <h3 className="text-2xl font-bold text-[#0F172A] mb-1">{leader.name}</h3>
                 <h4 className="text-lg text-[#F59E0B] font-medium mb-3">{leader.title}</h4>
                 <p className="text-sm text-[#475569] font-medium uppercase tracking-wider mb-6">{leader.edu}</p>
@@ -119,24 +119,24 @@ function FacultyPage() {
 
         {/* Teaching Staff */}
         <div>
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-12 text-center">Teaching & Support Staff</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-8 sm:mb-12 text-center">Teaching & Support Staff</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {team.map((p, i) => (
               <div
                 key={p.name}
-                className="group rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-all hover:border-[#F59E0B] hover:shadow-xl"
+                className="group rounded-2xl border border-gray-100 bg-white p-4 sm:p-6 text-center shadow-sm transition-all hover:border-[#F59E0B] hover:shadow-xl"
               >
-                <div className="mx-auto h-32 w-32 overflow-hidden rounded-full ring-4 ring-[#F8FAFC] transition group-hover:ring-[#F59E0B]/30">
+                <div className="mx-auto h-24 w-24 sm:h-32 sm:w-32 overflow-hidden rounded-full ring-4 ring-[#F8FAFC] transition group-hover:ring-[#F59E0B]/30">
                   <img
                     src={p.img}
                     alt={p.name}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-[#0F172A]">{p.name}</h3>
-                <div className="text-sm font-medium text-[#F59E0B] mb-1">{p.title}</div>
-                <div className="text-xs text-[#475569]">{p.edu}</div>
-                <div className="mt-5 flex justify-center gap-3 text-[#475569]">
+                <h3 className="mt-3 sm:mt-5 text-sm sm:text-lg font-bold text-[#0F172A]">{p.name}</h3>
+                <div className="text-xs sm:text-sm font-medium text-[#F59E0B] mb-1">{p.title}</div>
+                <div className="text-[10px] sm:text-xs text-[#475569]">{p.edu}</div>
+                <div className="mt-3 sm:mt-5 flex justify-center gap-2 sm:gap-3 text-[#475569]">
                   <a href="#" aria-label="LinkedIn" className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 hover:text-[#F59E0B] transition-colors">
                     <FaLinkedinIn size={14} />
                   </a>

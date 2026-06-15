@@ -1,5 +1,5 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { FiMenu, FiX, FiArrowRight } from "react-icons/fi";
 import { FaGraduationCap } from "react-icons/fa";
 
@@ -19,6 +19,18 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
+
+  const closeMenu = useCallback(() => setOpen(false), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -47,13 +59,13 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${bgClass}`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <Link
           to="/"
-          className={`flex items-center gap-2 text-2xl font-bold tracking-tight ${textClass}`}
+          className={`flex items-center gap-2 text-lg sm:text-2xl font-bold tracking-tight ${textClass}`}
         >
-          <FaGraduationCap className="text-[#F59E0B]" />
-          Infant Jesus
+          <FaGraduationCap className="text-[#F59E0B] flex-shrink-0" />
+          <span className="truncate">Infant Jesus</span>
         </Link>
 
         <ul className="hidden items-center gap-6 lg:flex xl:gap-8">
@@ -102,15 +114,16 @@ export function Navbar() {
             }`}
         />
         <aside
-          className={`absolute right-0 top-0 h-full w-72 bg-white p-6 shadow-2xl transition-transform ${open ? "translate-x-0" : "translate-x-full"
+          className={`absolute right-0 top-0 h-full w-[85vw] max-w-xs bg-white p-5 sm:p-6 shadow-2xl transition-transform duration-300 ease-in-out overflow-y-auto ${open ? "translate-x-0" : "translate-x-full"
             }`}
         >
-          <div className="mb-8 flex items-center justify-between">
-            <span className="flex items-center gap-2 text-xl font-bold text-[#0F172A]">
-              <FaGraduationCap className="text-[#F59E0B]" /> INFANT JESUS NURSERY AND PRIMARY SCHOOL
+          <div className="mb-6 flex items-start justify-between gap-3">
+            <span className="flex items-center gap-2 text-base font-bold text-[#0F172A] leading-tight">
+              <FaGraduationCap className="text-[#F59E0B] flex-shrink-0 text-lg" /> 
+              <span className="line-clamp-2">Infant Jesus Nursery & Primary School</span>
             </span>
-            <button onClick={() => setOpen(false)} aria-label="Close menu">
-              <FiX size={26} className="text-[#0F172A]" />
+            <button onClick={closeMenu} aria-label="Close menu" className="flex-shrink-0 p-1">
+              <FiX size={24} className="text-[#0F172A]" />
             </button>
           </div>
           <ul className="space-y-4">
@@ -118,10 +131,10 @@ export function Navbar() {
               <li key={l.name}>
                 <Link
                   to={l.href}
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
                   activeProps={{ className: "text-[#F59E0B] font-bold" }}
                   inactiveProps={{ className: "text-[#0F172A] hover:text-[#F59E0B]" }}
-                  className="block text-base font-medium transition-colors"
+                  className="block py-1 text-base font-medium transition-colors"
                 >
                   {l.name}
                 </Link>
@@ -130,10 +143,10 @@ export function Navbar() {
           </ul>
           <Link
             to="/admissions"
-            onClick={() => setOpen(false)}
-            className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#F59E0B] px-6 py-3 text-sm font-semibold text-white"
+            onClick={closeMenu}
+            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#F59E0B] px-6 py-3 text-sm font-semibold text-white shadow-md"
           >
-            Apply Now
+            Apply Now <FiArrowRight />
           </Link>
         </aside>
       </div>

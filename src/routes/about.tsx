@@ -54,20 +54,20 @@ function AboutPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-24 pb-16"
+      className="pt-20 sm:pt-24 pb-12 sm:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">About Us</h1>
-          <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl lg:text-6xl">About Us</h1>
+          <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-[#475569] max-w-3xl mx-auto px-2">
             Discover the rich history, values, and vision that make Infant Jesus Nursery and Primary School a leading institution in primary education.
           </p>
         </div>
 
         {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 mb-12 sm:mb-16 md:mb-20">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
             <div className="border-l-4 border-[#F59E0B] pl-6 mb-6">
               <h3 className="text-2xl font-bold text-[#0F172A]">Our Mission</h3>
             </div>
@@ -76,7 +76,7 @@ function AboutPage() {
               leaders ready to shape a better world starting from their foundational years.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
             <div className="border-l-4 border-[#F59E0B] pl-6 mb-6">
               <h3 className="text-2xl font-bold text-[#0F172A]">Our Vision</h3>
             </div>
@@ -88,10 +88,10 @@ function AboutPage() {
         </div>
 
         {/* History */}
-        <div className="mb-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="School History" className="rounded-2xl shadow-lg" />
+              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="School History" className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover" />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Our History</h2>
@@ -106,11 +106,11 @@ function AboutPage() {
         </div>
 
         {/* Principal's Message */}
-        <div className="bg-[#0F172A] text-white rounded-3xl p-8 md:p-12 mb-20 relative overflow-hidden">
+        <div className="bg-[#0F172A] text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 mb-12 sm:mb-16 md:mb-20 relative overflow-hidden">
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent" />
-          <div className="grid md:grid-cols-3 gap-8 items-center">
-            <div className="md:col-span-1">
-              <img src="https://i.pravatar.cc/300?img=49" alt="Principal" className="w-48 h-48 rounded-full border-4 border-[#F59E0B] mx-auto object-cover" />
+          <div className="flex flex-col items-center md:grid md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="md:col-span-1 flex flex-col items-center">
+              <img src="https://i.pravatar.cc/300?img=49" alt="Principal" className="w-32 h-32 sm:w-40 md:w-48 sm:h-40 md:h-48 rounded-full border-4 border-[#F59E0B] mx-auto object-cover" />
               <div className="text-center mt-4">
                 <h4 className="text-xl font-bold">Dr. Eleanor Pierce</h4>
                 <p className="text-[#F59E0B]">Principal</p>
@@ -126,27 +126,27 @@ function AboutPage() {
         </div>
 
         {/* Core Values */}
-        <div className="mb-20 text-center">
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-12">Our Core Values</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="mb-12 sm:mb-16 md:mb-20 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-8 sm:mb-12">Our Core Values</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {values.map((v, i) => (
-              <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="text-4xl text-[#F59E0B] mb-4 flex justify-center">{v.icon}</div>
-                <h4 className="text-xl font-bold text-[#0F172A] mb-2">{v.title}</h4>
-                <p className="text-[#475569]">{v.desc}</p>
+              <div key={i} className="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="text-3xl sm:text-4xl text-[#F59E0B] mb-3 sm:mb-4 flex justify-center">{v.icon}</div>
+                <h4 className="text-lg sm:text-xl font-bold text-[#0F172A] mb-2">{v.title}</h4>
+                <p className="text-sm sm:text-base text-[#475569]">{v.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {stats.map((s) => (
             <div
               key={s.label}
-              className="rounded-2xl border border-[#E2E8F0] bg-white p-8 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="rounded-2xl border border-[#E2E8F0] bg-white p-4 sm:p-6 md:p-8 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="text-4xl font-bold text-[#0F172A] md:text-5xl">
+              <div className="text-2xl font-bold text-[#0F172A] sm:text-3xl md:text-4xl lg:text-5xl">
                 <span className="text-[#F59E0B]">
                   <Counter to={s.value} />
                 </span>

@@ -40,20 +40,20 @@ function AcademicsPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-24 pb-16"
+      className="pt-20 sm:pt-24 pb-12 sm:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">Academics</h1>
-          <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl lg:text-6xl">Academics</h1>
+          <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-[#475569] max-w-3xl mx-auto px-2">
             A rigorous, future-ready curriculum tailored for early childhood and primary education.
           </p>
         </div>
 
         {/* Curriculum Overview */}
-        <div className="mb-20">
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100">
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-sm border border-gray-100">
             <h2 className="text-3xl font-bold text-[#0F172A] mb-6">Curriculum Overview</h2>
             <p className="text-[#475569] text-lg leading-relaxed mb-6">
               Our curriculum is designed to stimulate intellectual curiosity and foster a love for learning. By integrating best global practices with national standards, we provide a balanced education that addresses the academic, physical, emotional, and social development of each child.
@@ -65,11 +65,11 @@ function AcademicsPage() {
         </div>
 
         {/* Programs */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-12 text-center">Our Programs</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-8 sm:mb-12 text-center">Our Programs</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {programs.map((p, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#F59E0B] transition-colors group">
+              <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-[#F59E0B] transition-colors group">
                 <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F59E0B]/10 text-3xl text-[#F59E0B] group-hover:scale-110 transition-transform">
                   {p.icon}
                 </div>
@@ -89,9 +89,9 @@ function AcademicsPage() {
         </div>
 
         {/* Teaching Methodology */}
-        <div className="mb-20 bg-[#F8FAFC] rounded-3xl p-8 md:p-12 border border-gray-200">
-          <h2 className="text-3xl font-bold text-[#0F172A] mb-12 text-center">Teaching Methodology</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="mb-12 sm:mb-16 md:mb-20 bg-[#F8FAFC] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-gray-200">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-8 sm:mb-12 text-center">Teaching Methodology</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {methodologies.map((m, i) => (
               <div key={i} className="text-center">
                 <div className="mx-auto h-20 w-20 bg-white rounded-full flex items-center justify-center text-3xl text-[#F59E0B] shadow-sm mb-6">

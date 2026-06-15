@@ -51,26 +51,26 @@ function NewsEventsPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-24 pb-16"
+      className="pt-20 sm:pt-24 pb-12 sm:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">News & Events</h1>
-          <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl lg:text-6xl">News & Events</h1>
+          <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-[#475569] max-w-3xl mx-auto px-2">
             Stay updated with the latest happenings, achievements, and upcoming activities at INFANT JESUS NURSERY AND PRIMARY SCHOOL.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
           {/* Latest News */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-[#0F172A] mb-8">Latest News</h2>
-            <div className="space-y-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-6 sm:mb-8">Latest News</h2>
+            <div className="space-y-6 sm:space-y-8">
               {news.map((n, i) => (
                 <article
                   key={i}
-                  className="group flex flex-col sm:flex-row gap-6 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                  className="group flex flex-col sm:flex-row gap-4 sm:gap-6 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
                 >
                   <div className="sm:w-2/5 overflow-hidden">
                     <img
@@ -79,7 +79,7 @@ function NewsEventsPage() {
                       className="w-full h-48 sm:h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="sm:w-3/5 p-6 flex flex-col justify-center">
+                  <div className="sm:w-3/5 p-4 sm:p-6 flex flex-col justify-center">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-white bg-[#F59E0B] px-2 py-1 rounded-md">
                         {n.category}
@@ -107,7 +107,7 @@ function NewsEventsPage() {
           {/* Sidebar */}
           <aside>
             {/* Upcoming Events */}
-            <div className="bg-[#0F172A] rounded-2xl p-6 md:p-8 text-white mb-8">
+            <div className="bg-[#0F172A] rounded-2xl p-5 sm:p-6 md:p-8 text-white mb-6 sm:mb-8">
               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <FiCalendar className="text-[#F59E0B]" /> Upcoming Events
               </h3>
@@ -136,7 +136,7 @@ function NewsEventsPage() {
             </div>
 
             {/* Announcements */}
-            <div className="bg-[#F59E0B]/10 rounded-2xl p-6 md:p-8 border border-[#F59E0B]/20">
+            <div className="bg-[#F59E0B]/10 rounded-2xl p-5 sm:p-6 md:p-8 border border-[#F59E0B]/20">
               <h3 className="text-xl font-bold text-[#0F172A] mb-4">Important Announcements</h3>
               <div className="space-y-4">
                 <div className="pb-4 border-b border-[#F59E0B]/20">

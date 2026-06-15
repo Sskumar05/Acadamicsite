@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer id="contact" className="relative bg-[#0F172A] text-white/80 mt-auto">
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[#F59E0B] to-transparent" />
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:py-12 md:py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-8 sm:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2 text-2xl font-bold text-white">
               <FaGraduationCap className="text-[#F59E0B]" /> IJ Primary School
@@ -79,17 +79,17 @@ export function Footer() {
                 e.preventDefault();
                 alert("Subscribed!");
               }}
-              className="mt-4 flex overflow-hidden rounded-full bg-white/10"
+              className="mt-4 flex flex-col sm:flex-row overflow-hidden rounded-full bg-white/10 sm:rounded-full"
             >
               <input
                 required
                 type="email"
                 placeholder="Your email"
-                className="flex-1 bg-transparent px-4 py-2.5 text-sm text-white placeholder-white/50 outline-none"
+                className="flex-1 bg-transparent px-4 py-2.5 text-sm text-white placeholder-white/50 outline-none rounded-full sm:rounded-none"
               />
               <button
                 type="submit"
-                className="bg-[#F59E0B] px-5 text-sm font-semibold text-white transition hover:bg-[#d98708]"
+                className="bg-[#F59E0B] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#d98708] rounded-full sm:rounded-none"
               >
                 Subscribe
               </button>
@@ -97,7 +97,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-white/50 md:flex-row">
+        <div className="mt-8 sm:mt-10 md:mt-12 flex flex-col items-center justify-between gap-3 sm:gap-4 border-t border-white/10 pt-5 sm:pt-6 text-xs sm:text-sm text-white/50 md:flex-row">
           <div>© {new Date().getFullYear()} INFANT JESUS NURSERY AND PRIMARY SCHOOL. All rights reserved.</div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#F59E0B]">

@@ -36,22 +36,22 @@ function ContactPage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pt-24 pb-16"
+      className="pt-20 sm:pt-24 pb-12 sm:pb-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-[#0F172A] md:text-5xl lg:text-6xl">Contact Us</h1>
-          <p className="mt-4 text-xl text-[#475569] max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold text-[#0F172A] sm:text-4xl md:text-5xl lg:text-6xl">Contact Us</h1>
+          <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-[#475569] max-w-3xl mx-auto px-2">
             We would love to hear from you. Reach out to us for any inquiries, admissions information, or to schedule a visit.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12 mb-20">
+        <div className="grid lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16 md:mb-20">
           {/* Contact Information */}
-          <div className="lg:col-span-2 space-y-8">
-            <h2 className="text-2xl font-bold text-[#0F172A] mb-6">Get In Touch</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-6">
+          <div className="lg:col-span-2 space-y-6 sm:space-y-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-[#0F172A] mb-4 sm:mb-6">Get In Touch</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-6">
               {contactInfo.map((info, i) => (
                 <div key={i} className="flex gap-4">
                   <div className="flex-shrink-0">
@@ -74,8 +74,8 @@ function ContactPage() {
 
           {/* Contact Form */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
-              <h2 className="text-2xl font-bold text-[#0F172A] mb-6">Send us a Message</h2>
+            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100">
+              <h2 className="text-xl sm:text-2xl font-bold text-[#0F172A] mb-4 sm:mb-6">Send us a Message</h2>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
@@ -158,7 +158,7 @@ function ContactPage() {
         </div>
 
         {/* Google Maps Placeholder */}
-        <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-100 h-96 bg-gray-200 relative">
+        <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-gray-100 h-64 sm:h-80 md:h-96 bg-gray-200 relative">
           <div className="absolute inset-0 flex items-center justify-center">
              <div className="text-center text-gray-500">
                <FiMapPin size={48} className="mx-auto mb-4 opacity-50" />
